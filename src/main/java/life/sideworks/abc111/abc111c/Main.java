@@ -1,4 +1,4 @@
-package life.sideworks.abc111c;
+package life.sideworks.abc111.abc111c;
 
 import java.util.*;
 import static java.util.stream.Collectors.*;

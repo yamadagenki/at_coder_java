@@ -1,4 +1,4 @@
-package life.sideworks.abc111b;
+package life.sideworks.abc111.abc111b;
 
 import java.util.Scanner;
 

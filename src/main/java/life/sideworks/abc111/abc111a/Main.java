@@ -1,4 +1,4 @@
-package life.sideworks.abc111a;
+package life.sideworks.abc111.abc111a;
 
 import java.util.Scanner;
 import java.util.stream.Collectors;
