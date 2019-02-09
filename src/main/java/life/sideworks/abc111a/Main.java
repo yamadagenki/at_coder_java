@@ -1,6 +1,8 @@
 package life.sideworks.abc111a;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author shengboxu
@@ -10,17 +12,10 @@ public class Main {
     public static void main(String [] args)
     {
         Scanner sc = new Scanner(System.in);
-        // 整数の入力
-        int a = sc.nextInt();
-
-        // スペース区切りの整数の入力
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-
-        // 文字列の入力
-        String s = sc.next();
-
-        // 出力
-        System.out.println((a+b+c) + " " + s);
+        String str = sc.next();
+        
+        System.out.println(Stream.of(str.split(""))
+                .map(e -> e.equals("9") ? "1" : "9")
+                .collect(Collectors.joining("")));
     }
 }
