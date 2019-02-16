@@ -28,21 +28,28 @@ public class Main {
     }
     
     public static class Numeric {
-        private int a;
-        private int b;
+        final private int a;
+        final private int b;
         
-        public Numeric(final int a, final int b) {
+        Numeric(final int a, final int b) {
             this.a = a < b ? a : b;
             this.b = (a + b) - this.a;
         }
         
-        public int getGcd() {
+        int getGcd() {
+            int x = this.a;
+            int y = this.b;
+            
             int tmp;
-            while ((tmp = a % b) != 0) {
-                a = b;
-                b = tmp;
+            while ((tmp = x % y) != 0) {
+                x = y;
+                y = tmp;
             }
-            return b;
+            return y;
+        }
+    
+        int getLcm() {
+            return a * b / getGcd();
         }
     }
 }
